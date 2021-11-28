@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-    <title>Create Password</title>
+    <title>Log In</title>
     <style>
         body{
             margin: 0;
@@ -41,19 +41,6 @@
             justify-self: center;
             display: none;
         }
-        .title{
-            font-size: var(--lg);
-            margin-bottom: 12px;
-            text-align: center;
-        }
-        .subtitle{
-            color: var(--very-light-pink);
-            font-size: var(--md);
-            font-weight: 300px;
-            margin-top: 0px;
-            margin-bottom: 32px;
-            text-align: center;
-        }
         .input{
             background-color: var(--text-input-field);
             border: none;
@@ -63,10 +50,21 @@
             padding: 6px;
             margin-bottom: 12px;
         }
+        .input-email{
+            margin-bottom: 22px;
+        }
         .form{
             display: flex;
             flex-direction: column;
         }
+        .form a {
+            color: var(--hospital-green);
+            font-size: var(--sm);
+            text-align: center;
+            text-decoration: none;
+            margin-bottom:52px;
+        }
+
         .label{
             font-size: var(--sm);
             font-weight: bold;
@@ -84,6 +82,17 @@
             font-weight: bold;
             height: 50px;
         }
+        .secondary-button{
+            background-color: var(--white);
+            border-radius: 8px;
+            border: 1px solid var(--hospital-green);
+            color: var(--hospital-green);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
         .login-button{
             margin-top: 14px;
             margin-bottom: 30px;
@@ -93,6 +102,9 @@
             .logo{
                 display: block;
             }
+            .singup-button{
+                margin-top: 240px;
+            }
         }
     </style>
 </head>
@@ -100,17 +112,18 @@
     <div class="login">
         <div class="form-container">
             <img src="./Media/logos/logo_yard_sale.svg" alt="logo" class="logo">
-            <h1 class="title"> Create new Password</h1>
-            <p class="subtitle"> Enter a new Password for your account</p>
+
             <form action="/" class="form">
-                <label for="password" class="label">Password</label>
+                <label for="email" class="label">Email Address</label>
+                <input type="text" id="email" placeholder="Platzi@example.com" class="input input-email">
+
+                <label for="password" class="label">Confirm Password</label>
                 <input type="password" id="password" placeholder="*********" class="input input-password">
 
-                <label for="new-password" class="label">Confirm Password</label>
-                <input type="password" id="new-password" placeholder="*********" class="input input-password">
-
-                <input type="submit" value="Confirm" class="primary-button login-button">
+                <input type="submit" value="Log In" class="primary-button login-button">
+                <a href="/">Forgot my password</a>
             </form>
+            <button class="secondary-button singup-button">Sign up</button>
         </div>
     </div>
 </body>
